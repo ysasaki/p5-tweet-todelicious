@@ -1,6 +1,6 @@
 package Tweet::ToDelicious;
 
-use v5.14.2;
+use v5.14;
 use utf8;
 use warnings;
 use Getopt::Long;
@@ -13,7 +13,7 @@ use Log::Minimal;
 use Tweet::ToDelicious::Entry;
 use Data::Dumper;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
     my $class = shift;

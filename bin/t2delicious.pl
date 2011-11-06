@@ -1,5 +1,5 @@
 #!perl
-use v5.14.2;
+use v5.14;
 use warnings;
 use Config::Any;
 use File::Spec::Functions qw(catfile);

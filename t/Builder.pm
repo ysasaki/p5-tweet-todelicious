@@ -1,6 +1,6 @@
 package t::Builder;
 
-use v5.14.2;
+use v5.14;
 use warnings;
 use parent 'Exporter';
 use Tweet::ToDelicious::Entry;

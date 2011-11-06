@@ -1,6 +1,6 @@
 package Tweet::ToDelicious::Entry;
 
-use v5.14.2;
+use v5.14;
 use utf8;
 use warnings;
 use List::MoreUtils qw(uniq);

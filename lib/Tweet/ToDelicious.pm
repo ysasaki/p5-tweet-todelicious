@@ -13,7 +13,7 @@ use Log::Minimal;
 use Tweet::ToDelicious::Entry;
 use Data::Dumper;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my $class = shift;
@@ -53,7 +53,7 @@ sub run {
                         for my $post (@posts) {
                             push @coro, async {
                                 my $done = $delicious->add_post($post);
-                                infof("Post %s done", $_->{url}) if $done;
+                                infof("Post %s done", $post->{url}) if $done;
                             };
                         }
                         $_->join for @coro;

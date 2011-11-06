@@ -8,3 +8,5 @@ blib
 .*
 local/
 config.yaml
+MYMETA.json
+MYMETA.yml

@@ -1,0 +1,10 @@
+^local/
+^\.carton/
+^MANIFEST\.SKIP$
+^MANIFEST\.bak$
+^\.gitignore$
+^\.git/
+^\.shipit$
+^Makefile$
+^Makefile\.old$
+^config.yaml$

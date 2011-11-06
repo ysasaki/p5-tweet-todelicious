@@ -1,0 +1,6 @@
+Revision history for Perl extension Twitter::ToDelicious.
+
+0.01  Sat Nov  5 16:31:15 2011
+	- original version; created by h2xs 1.23 with options
+		-AXce --use-new-tests --skip-exporter --skip-ppport -v 0.01 -n Twitter::ToDelicious
+

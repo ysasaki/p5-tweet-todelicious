@@ -10,7 +10,7 @@ subtest 'posts' => sub {
                 'hashtags' =>
                     [ { 'text' => 'test1' }, { 'text' => 'test2' } ],
                 'urls' => [
-                    { 'expanded_url' => 'http://www.google.com', },
+                    { 'expanded_url' => 'http://www.google.co.jp', },
                     { 'expanded_url' => 'http://www.yahoo.com/', }
                 ]
             },
@@ -24,7 +24,7 @@ subtest 'posts' => sub {
 
     is_deeply \@posts,
         [
-        {   url  => 'http://www.google.com',
+        {   url  => 'http://www.google.co.jp',
             tags => 'test1,test2,blog,test,via:tweet2delicious',
             description =>
                 '[blog][test] test http://t.co/tYSEO8de http://t.co/rtd3JeP5',
@@ -64,7 +64,7 @@ subtest 'favorited' => sub {
                 'hashtags' =>
                     [ { 'text' => 'test1' }, { 'text' => 'test2' } ],
                 'urls' => [
-                    { 'expanded_url' => 'http://www.google.com', },
+                    { 'expanded_url' => 'http://www.google.co.jp', },
                     { 'expanded_url' => 'http://www.yahoo.com/', }
                 ]
             },
@@ -78,7 +78,7 @@ subtest 'favorited' => sub {
 
     is_deeply \@posts,
         [
-        {   url  => 'http://www.google.com',
+        {   url  => 'http://www.google.co.jp',
             tags => 'test1,test2,blog,test,favorite,via:tweet2delicious',
             description =>
                 '[blog][test] test http://t.co/tYSEO8de http://t.co/rtd3JeP5',

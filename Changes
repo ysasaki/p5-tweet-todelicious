@@ -1,5 +1,8 @@
 Revision history for Perl extension Twitter::ToDelicious.
 
+0.04  Tue Nov  8 01:31 2011
+    - add new feature expand uri. issues:#1
+
 0.03  Sat Nov  6 23:41 2011
     - change required perl version to v5.14
 

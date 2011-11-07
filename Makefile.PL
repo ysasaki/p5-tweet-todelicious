@@ -19,6 +19,10 @@ WriteMakefile(
         'List::MoreUtils'           => '0.33',
         'Log::Minimal'              => '0.09',
     },
+    BUILD_REQUIRES => {
+        'Test::TCP' => '1.13',
+    },
     EXE_FILES => ['bin/t2delicious.pl'],
     AUTHOR    => 'Yoshihiro Sasaki <ysasaki at cpan.org>',
+    test      => { TESTS => 't/000_ToDelicious/*.t t/001_Entry/*.t' },
 );

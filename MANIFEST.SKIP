@@ -9,3 +9,4 @@
 ^Makefile\.old$
 ^config.yaml$
 ^MYMETA\.
+^carton\.lock

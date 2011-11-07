@@ -1,5 +1,4 @@
 bin/t2delicious.pl
-carton.lock
 Changes
 config.yaml.sample
 lib/Tweet/ToDelicious.pm

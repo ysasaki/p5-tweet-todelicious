@@ -682,6 +682,10 @@
                "file" : "Coro/Debug.pm",
                "version" : "6.06"
             },
+            "Coro::EV" : {
+               "file" : "Coro/EV.pm",
+               "version" : "6.06"
+            },
             "Coro::Handle" : {
                "file" : "Coro/Handle.pm",
                "version" : "6.06"
@@ -943,6 +947,63 @@
          },
          "version" : "2.13"
       },
+      "EV" : {
+         "dist" : "EV-4.03",
+         "module" : "EV",
+         "mymeta" : {
+            "abstract" : "unknown",
+            "author" : [
+               "unknown"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "ExtUtils::MakeMaker version 6.56, CPAN::Meta::Converter version 2.112150",
+            "license" : [
+               "unknown"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "EV",
+            "no_index" : {
+               "directory" : [
+                  "t",
+                  "inc"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : 0
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : 0
+                  }
+               },
+               "runtime" : {
+                  "requires" : {
+                     "common::sense" : 0
+                  }
+               }
+            },
+            "release_status" : "stable",
+            "version" : "4.03"
+         },
+         "name" : "EV",
+         "pathname" : "M/ML/MLEHMANN/EV-4.03.tar.gz",
+         "provides" : {
+            "EV" : {
+               "file" : "EV.pm",
+               "version" : "4.03"
+            },
+            "EV::MakeMaker" : {
+               "file" : "EV/MakeMaker.pm"
+            }
+         },
+         "version" : "4.03"
+      },
       "Encode::Locale" : {
          "dist" : "Encode-Locale-1.02",
          "module" : "Encode::Locale",
@@ -1083,58 +1144,6 @@
             }
          },
          "version" : "6.03"
-      },
-      "Guard" : {
-         "dist" : "Guard-1.022",
-         "module" : "Guard",
-         "mymeta" : {
-            "abstract" : "unknown",
-            "author" : [
-               "unknown"
-            ],
-            "dynamic_config" : 0,
-            "generated_by" : "ExtUtils::MakeMaker::JSONMETA version 7.000, CPAN::Meta::Converter version 2.112150",
-            "license" : [
-               "unknown"
-            ],
-            "meta-spec" : {
-               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-               "version" : "2"
-            },
-            "name" : "Guard",
-            "no_index" : {
-               "directory" : [
-                  "t",
-                  "inc"
-               ]
-            },
-            "prereqs" : {
-               "build" : {
-                  "requires" : {
-                     "ExtUtils::MakeMaker" : 0
-                  }
-               },
-               "configure" : {
-                  "requires" : {
-                     "ExtUtils::MakeMaker" : 0
-                  }
-               },
-               "runtime" : {
-                  "requires" : {}
-               }
-            },
-            "release_status" : "stable",
-            "version" : "1.022"
-         },
-         "name" : "Guard",
-         "pathname" : "M/ML/MLEHMANN/Guard-1.022.tar.gz",
-         "provides" : {
-            "Guard" : {
-               "file" : "Guard.pm",
-               "version" : "1.022"
-            }
-         },
-         "version" : "1.022"
       },
       "HTML::Parser" : {
          "dist" : "HTML-Parser-3.69",

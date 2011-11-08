@@ -12,6 +12,7 @@ WriteMakefile(
         'YAML::XS'                  => '0.37',
         'Net::Delicious'            => '1.14',
         'LWP::Protocol::https'      => '6.02',
+        'EV'                        => '4.03',
         'Coro'                      => '6.06',
         'AnyEvent::Twitter::Stream' => '0.22',
         'Net::OAuth'                => '0.27',

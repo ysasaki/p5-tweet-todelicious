@@ -15,7 +15,7 @@ use Coro::AnyEvent;
 use Log::Minimal;
 use Tweet::ToDelicious::Entry;
 
-our $VERSION = '0.05';
+our $VERSION = '0.05_01';
 
 sub new {
     my $class = shift;
@@ -44,12 +44,11 @@ sub run {
             on_tweet => sub {
                 my $tweet = shift;
                 my $entry = Tweet::ToDelicious::Entry->new($tweet);
-                debugf( "screen_name: %s",
-                    $entry->screen_name || '__NONE__' );
                 if (   ( $entry->screen_name ~~ $myname )
                     or ( $entry->in_reply_to_screen_name ~~ $myname ) )
                 {
                     my @posts = $entry->posts;
+                    debugf( "screen_name: %s", $entry->screen_name );
                     debugf( "posts: %s", \@posts );
                     if ( @posts > 0 ) {
                         for my $post (@posts) {

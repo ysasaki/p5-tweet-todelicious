@@ -1,5 +1,8 @@
 Revision history for Perl extension Twitter::ToDelicious.
 
+0.05_01  Thu Nov 10 21:39 2011
+    - does not show other usernames any more.
+
 0.05  Wed Nov  9 02:56 2011
     - fix expand_url
 

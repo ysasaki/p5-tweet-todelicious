@@ -29,6 +29,25 @@ t2delicious.pl - Links in your tweet to delicious.
 
 Copy config.yaml.sample to config.yaml. And write your config.
 
+=head2 config.yaml.sample
+
+    twitter:
+      consumer_key: your_consumer_key
+      consumer_secret: your_consumer_secret
+      token: your_token
+      token_secret: your_token_secret
+    delicious:
+      user: your_delicious_username
+      pswd: your_password
+      debug: 0
+    t2delicious:
+      twitter_screen_name: your_twitter_name
+
+=head1 DESCRIPTION
+
+t2delicious.pl post your links in tweet and your favorite with tags.
+You should run this script using daemontools or supervisord or something else.
+
 =head1 AUTHOR
 
 Yoshihiro Sasaki, E<lt>ysasaki at cpan.orgE<gt>

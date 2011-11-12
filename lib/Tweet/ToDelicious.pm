@@ -13,9 +13,9 @@ use Coro::EV;
 use Coro::LWP;
 use Coro::AnyEvent;
 use Log::Minimal;
-use Tweet::ToDelicious::Entry;
+use Tweet::ToDelicious::Entity;
 
-our $VERSION = '0.05_01';
+our $VERSION = '0.06';
 
 sub new {
     my $class = shift;
@@ -31,36 +31,31 @@ sub run {
     local $Log::Minimal::AUTODUMP = 1;
 
     while (1) {
-        my $delicious = $self->delicious;
-        my $myname    = $self->{config}->{t2delicious}->{twitter_screen_name};
-        my $cv        = AE::cv;
-        my $listener  = AnyEvent::Twitter::Stream->new(
+        my $myname   = $self->{config}->{t2delicious}->{twitter_screen_name};
+        my $cv       = AE::cv;
+        my $listener = AnyEvent::Twitter::Stream->new(
             %{ $self->{config}->{twitter} },
             method     => 'userstream',
             on_connect => sub {
                 infof( 'Start watching twitter:@%s, delicious:%s',
                     $myname, $self->{config}->{delicious}->{user} );
             },
+            on_event => sub {
+                my $tweet = shift;
+                my $entry = Tweet::ToDelicious::Entity->new($tweet);
+                if ( $entry->is_favorite && $entry->screen_name ~~ $myname ) {
+                    my @posts = $entry->posts;
+                    $self->_posts(@posts);
+                }
+            },
             on_tweet => sub {
                 my $tweet = shift;
-                my $entry = Tweet::ToDelicious::Entry->new($tweet);
+                my $entry = Tweet::ToDelicious::Entity->new($tweet);
                 if (   ( $entry->screen_name ~~ $myname )
                     or ( $entry->in_reply_to_screen_name ~~ $myname ) )
                 {
                     my @posts = $entry->posts;
-                    debugf( "screen_name: %s", $entry->screen_name );
-                    debugf( "posts: %s", \@posts );
-                    if ( @posts > 0 ) {
-                        for my $post (@posts) {
-                            async {
-                                $post->{url}
-                                    = $self->coro_head( $post->{url} );
-                                my $done = $delicious->add_post($post);
-                                infof( "Post %s done", $post->{url} )
-                                    if $done;
-                            };
-                        }
-                    }
+                    $self->_posts(@posts);
                 }
             },
             on_error => sub {
@@ -91,6 +86,23 @@ sub coro_head {
         debugf( "Status != 200. headers: %s", ddf($headers) );
         return $headers->{Redirect}->[0]->{URL}
             if exists $headers->{Redirect};
+    }
+}
+
+sub _posts {
+    my $self      = shift;
+    my $delicious = $self->delicious;
+    my @posts     = @_;
+    debugf( "posts: %s", \@posts );
+    if ( @posts > 0 ) {
+        for my $post (@posts) {
+            async {
+                $post->{url} = $self->coro_head( $post->{url} );
+                my $done = $delicious->add_post($post);
+                infof( "Post %s done", $post->{url} )
+                    if $done;
+            };
+        }
     }
 }
 

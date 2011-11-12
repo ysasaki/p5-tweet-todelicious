@@ -1,5 +1,8 @@
 Revision history for Perl extension Twitter::ToDelicious.
 
+0.06  Sun Nov 13 01:08 2011
+    - add a feature sending your favorite to delicious #2
+
 0.05_01  Thu Nov 10 21:39 2011
     - does not show other usernames any more.
 

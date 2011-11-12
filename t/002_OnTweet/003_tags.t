@@ -4,7 +4,7 @@ use Test::More;
 use t::Builder;
 
 subtest 'tags' => sub {
-    my $entry = entry(
+    my $entity = ontweet(
         {   'favorited' => 0,
             'entities'  => {
                 'hashtags' => [{ 'text' => 'test1' }, { 'text' => 'test2'} ],
@@ -19,12 +19,12 @@ subtest 'tags' => sub {
             'in_reply_to_screen_name' => undef
         }
     );
-    my @tags = $entry->tags;
+    my @tags = $entity->tags;
     is_deeply \@tags, [qw/test1 test2 blog test/] or diag explain \@tags;
 };
 
 subtest 'uniq' => sub {
-    my $entry = entry(
+    my $entity = ontweet(
         {   'favorited' => 0,
             'entities'  => {
                 'hashtags' => [{ 'text' => 'test' }, { 'text' => 'test'} ],
@@ -39,7 +39,7 @@ subtest 'uniq' => sub {
             'in_reply_to_screen_name' => undef
         }
     );
-    my @tags = $entry->tags;
+    my @tags = $entity->tags;
     is_deeply \@tags, [qw/test blog/] or diag explain \@tags;
 };
 

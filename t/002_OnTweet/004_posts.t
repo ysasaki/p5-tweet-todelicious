@@ -4,7 +4,7 @@ use Test::More;
 use t::Builder;
 
 subtest 'posts' => sub {
-    my $entry = entry(
+    my $entity = ontweet(
         {   'favorited' => 0,
             'entities'  => {
                 'hashtags' =>
@@ -20,7 +20,7 @@ subtest 'posts' => sub {
             'in_reply_to_screen_name' => undef
         }
     );
-    my @posts = $entry->posts;
+    my @posts = $entity->posts;
 
     is_deeply \@posts,
         [
@@ -40,7 +40,7 @@ subtest 'posts' => sub {
 };
 
 subtest 'no links' => sub {
-    my $entry = entry(
+    my $entity = ontweet(
         {   'favorited' => 0,
             'entities'  => {
                 'hashtags' =>
@@ -53,12 +53,12 @@ subtest 'no links' => sub {
             'in_reply_to_screen_name' => undef
         }
     );
-    my @posts = $entry->posts;
+    my @posts = $entity->posts;
     is_deeply \@posts, [];
 };
 
 subtest 'favorited' => sub {
-    my $entry = entry(
+    my $entity = ontweet(
         {   'favorited' => 1,
             'entities'  => {
                 'hashtags' =>
@@ -74,7 +74,7 @@ subtest 'favorited' => sub {
             'in_reply_to_screen_name' => undef
         }
     );
-    my @posts = $entry->posts;
+    my @posts = $entity->posts;
 
     is_deeply \@posts,
         [

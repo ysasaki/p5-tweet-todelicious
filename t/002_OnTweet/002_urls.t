@@ -22,7 +22,7 @@ subtest 'urls' => sub {
             ]
         },
     };
-    my $entry = entry($tweet);
+    my $entry = ontweet($tweet);
     my @urls  = $entry->urls;
     is_deeply \@urls,
         [ 'http://www.google.co.jp/', 'http://www.yahoo.com/', ];

@@ -1,8 +1,8 @@
-package Tweet::ToDelicious::Entry;
+package Tweet::ToDelicious::Entity::OnTweet;
 
 use v5.14;
-use utf8;
 use warnings;
+use parent 'Tweet::ToDelicious::Entity::Interface';
 use List::MoreUtils qw(uniq);
 use Log::Minimal;
 use Class::Accessor::Lite (
@@ -10,7 +10,6 @@ use Class::Accessor::Lite (
     ro  => [qw(text in_reply_to_screen_name)],
 );
 
-sub retweeted { exists $_[0]->{retweeted_status} ? 1 : 0 }
 sub screen_name { $_[0]->{user}->{screen_name} }
 
 sub urls {

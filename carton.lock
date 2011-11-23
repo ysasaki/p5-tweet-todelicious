@@ -1,7 +1,7 @@
 {
    "modules" : {
       "AnyEvent" : {
-         "dist" : "AnyEvent-6.1",
+         "dist" : "AnyEvent-6.11",
          "module" : "AnyEvent",
          "mymeta" : {
             "abstract" : "unknown",
@@ -49,10 +49,10 @@
                }
             },
             "release_status" : "stable",
-            "version" : "6.1"
+            "version" : "6.11"
          },
          "name" : "AnyEvent",
-         "pathname" : "M/ML/MLEHMANN/AnyEvent-6.1.tar.gz",
+         "pathname" : "M/ML/MLEHMANN/AnyEvent-6.11.tar.gz",
          "provides" : {
             "AE" : {
                "file" : "AE.pm",
@@ -69,7 +69,7 @@
             },
             "AnyEvent" : {
                "file" : "AnyEvent.pm",
-               "version" : "6.1"
+               "version" : "6.11"
             },
             "AnyEvent::Base" : {
                "file" : "AnyEvent.pm"
@@ -182,7 +182,7 @@
                "version" : "0"
             }
          },
-         "version" : "6.1"
+         "version" : "6.11"
       },
       "AnyEvent::HTTP" : {
          "dist" : "AnyEvent-HTTP-2.13",
@@ -599,7 +599,7 @@
          "version" : "4.58"
       },
       "Coro" : {
-         "dist" : "Coro-6.06",
+         "dist" : "Coro-6.07",
          "module" : "Coro",
          "mymeta" : {
             "abstract" : "unknown",
@@ -607,7 +607,7 @@
                "unknown"
             ],
             "dynamic_config" : 0,
-            "generated_by" : "ExtUtils::MakeMaker version 6.58, CPAN::Meta::Converter version 2.110930001, CPAN::Meta::Converter version 2.112150",
+            "generated_by" : "ExtUtils::MakeMaker version 6.59, CPAN::Meta::Converter version 2.112150",
             "license" : [
                "unknown"
             ],
@@ -653,106 +653,106 @@
                }
             },
             "release_status" : "stable",
-            "version" : "6.06"
+            "version" : "6.07"
          },
          "name" : "Coro",
-         "pathname" : "M/ML/MLEHMANN/Coro-6.06.tar.gz",
+         "pathname" : "M/ML/MLEHMANN/Coro-6.07.tar.gz",
          "provides" : {
             "Coro" : {
                "file" : "Coro.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::AIO" : {
                "file" : "Coro/AIO.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::AnyEvent" : {
                "file" : "Coro/AnyEvent.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::BDB" : {
                "file" : "Coro/BDB.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Channel" : {
                "file" : "Coro/Channel.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Debug" : {
                "file" : "Coro/Debug.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::EV" : {
                "file" : "Coro/EV.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Handle" : {
                "file" : "Coro/Handle.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Handle::FH" : {
                "file" : "Coro/Handle.pm"
             },
             "Coro::LWP" : {
                "file" : "Coro/LWP.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::LWP::Socket" : {
                "file" : "Coro/LWP.pm"
             },
             "Coro::MakeMaker" : {
                "file" : "Coro/MakeMaker.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::RWLock" : {
                "file" : "Coro/RWLock.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Select" : {
                "file" : "Coro/Select.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Semaphore" : {
                "file" : "Coro/Semaphore.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::SemaphoreSet" : {
                "file" : "Coro/SemaphoreSet.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Signal" : {
                "file" : "Coro/Signal.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Socket" : {
                "file" : "Coro/Socket.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Specific" : {
                "file" : "Coro/Specific.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::State" : {
                "file" : "Coro/State.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Storable" : {
                "file" : "Coro/Storable.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Timer" : {
                "file" : "Coro/Timer.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             },
             "Coro::Timer::Timeout" : {
                "file" : "Coro/Timer.pm"
             },
             "Coro::Util" : {
                "file" : "Coro/Util.pm",
-               "version" : "6.06"
+               "version" : "6.07"
             }
          },
-         "version" : "6.06"
+         "version" : "6.07"
       },
       "Crypt::SSLeay" : {
          "dist" : "Crypt-SSLeay-0.58",
@@ -947,63 +947,6 @@
          },
          "version" : "2.13"
       },
-      "EV" : {
-         "dist" : "EV-4.03",
-         "module" : "EV",
-         "mymeta" : {
-            "abstract" : "unknown",
-            "author" : [
-               "unknown"
-            ],
-            "dynamic_config" : 0,
-            "generated_by" : "ExtUtils::MakeMaker version 6.56, CPAN::Meta::Converter version 2.112150",
-            "license" : [
-               "unknown"
-            ],
-            "meta-spec" : {
-               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-               "version" : "2"
-            },
-            "name" : "EV",
-            "no_index" : {
-               "directory" : [
-                  "t",
-                  "inc"
-               ]
-            },
-            "prereqs" : {
-               "build" : {
-                  "requires" : {
-                     "ExtUtils::MakeMaker" : 0
-                  }
-               },
-               "configure" : {
-                  "requires" : {
-                     "ExtUtils::MakeMaker" : 0
-                  }
-               },
-               "runtime" : {
-                  "requires" : {
-                     "common::sense" : 0
-                  }
-               }
-            },
-            "release_status" : "stable",
-            "version" : "4.03"
-         },
-         "name" : "EV",
-         "pathname" : "M/ML/MLEHMANN/EV-4.03.tar.gz",
-         "provides" : {
-            "EV" : {
-               "file" : "EV.pm",
-               "version" : "4.03"
-            },
-            "EV::MakeMaker" : {
-               "file" : "EV/MakeMaker.pm"
-            }
-         },
-         "version" : "4.03"
-      },
       "Encode::Locale" : {
          "dist" : "Encode-Locale-1.02",
          "module" : "Encode::Locale",
@@ -1144,6 +1087,58 @@
             }
          },
          "version" : "6.03"
+      },
+      "Guard" : {
+         "dist" : "Guard-1.022",
+         "module" : "Guard",
+         "mymeta" : {
+            "abstract" : "unknown",
+            "author" : [
+               "unknown"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "ExtUtils::MakeMaker::JSONMETA version 7.000, CPAN::Meta::Converter version 2.112150",
+            "license" : [
+               "unknown"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Guard",
+            "no_index" : {
+               "directory" : [
+                  "t",
+                  "inc"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : 0
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : 0
+                  }
+               },
+               "runtime" : {
+                  "requires" : {}
+               }
+            },
+            "release_status" : "stable",
+            "version" : "1.022"
+         },
+         "name" : "Guard",
+         "pathname" : "M/ML/MLEHMANN/Guard-1.022.tar.gz",
+         "provides" : {
+            "Guard" : {
+               "file" : "Guard.pm",
+               "version" : "1.022"
+            }
+         },
+         "version" : "1.022"
       },
       "HTML::Parser" : {
          "dist" : "HTML-Parser-3.69",
@@ -1889,7 +1884,7 @@
       },
       "LWP" : {
          "dist" : "libwww-perl-6.03",
-         "module" : "LWP",
+         "module" : "LWP::UserAgent",
          "mymeta" : {
             "abstract" : "The World-Wide Web library for Perl",
             "author" : [
@@ -2663,7 +2658,7 @@
          "version" : "1.14"
       },
       "Net::HTTP" : {
-         "dist" : "Net-HTTP-6.01",
+         "dist" : "Net-HTTP-6.02",
          "module" : "Net::HTTP",
          "mymeta" : {
             "abstract" : "Low-level HTTP connection (client)",
@@ -2671,7 +2666,7 @@
                "Gisle Aas <gisle@activestate.com>"
             ],
             "dynamic_config" : 0,
-            "generated_by" : "ExtUtils::MakeMaker version 6.56, CPAN::Meta::Converter version 2.112150",
+            "generated_by" : "ExtUtils::MakeMaker version 6.57_05, CPAN::Meta::Converter version 2.112150",
             "license" : [
                "perl_5"
             ],
@@ -2717,14 +2712,14 @@
                },
                "x_MailingList" : "mailto:libwww@perl.org"
             },
-            "version" : "6.01"
+            "version" : "6.02"
          },
          "name" : "Net::HTTP",
-         "pathname" : "G/GA/GAAS/Net-HTTP-6.01.tar.gz",
+         "pathname" : "G/GA/GAAS/Net-HTTP-6.02.tar.gz",
          "provides" : {
             "Net::HTTP" : {
                "file" : "Net/HTTP.pm",
-               "version" : "6.01"
+               "version" : "6.02"
             },
             "Net::HTTP::Methods" : {
                "file" : "Net/HTTP/Methods.pm",
@@ -2736,10 +2731,10 @@
             },
             "Net::HTTPS" : {
                "file" : "Net/HTTPS.pm",
-               "version" : "6.00"
+               "version" : "6.02"
             }
          },
-         "version" : "6.01"
+         "version" : "6.02"
       },
       "Net::OAuth" : {
          "dist" : "Net-OAuth-0.27",
@@ -3992,85 +3987,6 @@
          },
          "version" : "1.11"
       },
-      "XML::Parser" : {
-         "dist" : "XML-Parser-2.41",
-         "module" : "XML::Parser",
-         "mymeta" : {
-            "abstract" : "A perl module for parsing XML documents",
-            "author" : [
-               "Clark Cooper (coopercc@netheaven.com)"
-            ],
-            "dynamic_config" : 0,
-            "generated_by" : "ExtUtils::MakeMaker version 6.56, CPAN::Meta::Converter version 2.112150",
-            "license" : [
-               "perl_5"
-            ],
-            "meta-spec" : {
-               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-               "version" : "2"
-            },
-            "name" : "XML-Parser",
-            "no_index" : {
-               "directory" : [
-                  "t",
-                  "inc"
-               ]
-            },
-            "prereqs" : {
-               "build" : {
-                  "requires" : {
-                     "ExtUtils::MakeMaker" : 0
-                  }
-               },
-               "configure" : {
-                  "requires" : {
-                     "ExtUtils::MakeMaker" : 0
-                  }
-               },
-               "runtime" : {
-                  "requires" : {
-                     "LWP" : 0,
-                     "perl" : "5.00405"
-                  }
-               }
-            },
-            "release_status" : "stable",
-            "resources" : {
-               "repository" : {
-                  "url" : "http://github.com/chorny/XML-Parser"
-               }
-            },
-            "version" : "2.41"
-         },
-         "name" : "XML::Parser",
-         "pathname" : "T/TO/TODDR/XML-Parser-2.41.tar.gz",
-         "provides" : {
-            "XML::Parser" : {
-               "file" : "XML/Parser.pm",
-               "version" : "2.41"
-            },
-            "XML::Parser::Expat" : {
-               "file" : "XML/Parser/Expat.pm",
-               "version" : "2.41"
-            },
-            "XML::Parser::Style::Debug" : {
-               "file" : "XML/Parser/Style/Debug.pm"
-            },
-            "XML::Parser::Style::Objects" : {
-               "file" : "XML/Parser/Style/Objects.pm"
-            },
-            "XML::Parser::Style::Stream" : {
-               "file" : "XML/Parser/Style/Stream.pm"
-            },
-            "XML::Parser::Style::Subs" : {
-               "file" : "XML/Parser/Style/Subs.pm"
-            },
-            "XML::Parser::Style::Tree" : {
-               "file" : "XML/Parser/Style/Tree.pm"
-            }
-         },
-         "version" : "2.41"
-      },
       "XML::SAX" : {
          "dist" : "XML-SAX-0.99",
          "module" : "XML::SAX",
@@ -4219,52 +4135,6 @@
          },
          "version" : "1.08"
       },
-      "XML::SAX::Expat" : {
-         "dist" : "XML-SAX-Expat-0.40",
-         "module" : "XML::SAX::Expat",
-         "mymeta" : {
-            "abstract" : "SAX Driver for Expat",
-            "author" : [
-               "Robin Berjon"
-            ],
-            "dynamic_config" : 0,
-            "generated_by" : "ExtUtils::MakeMaker version 6.44, CPAN::Meta::Converter version 2.112150",
-            "license" : [
-               "perl_5"
-            ],
-            "meta-spec" : {
-               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-               "version" : "2"
-            },
-            "name" : "XML-SAX-Expat",
-            "prereqs" : {
-               "build" : {
-                  "requires" : {
-                     "ExtUtils::MakeMaker" : 0
-                  }
-               },
-               "runtime" : {
-                  "requires" : {
-                     "XML::NamespaceSupport" : "0.03",
-                     "XML::Parser" : "2.27",
-                     "XML::SAX" : "0.03",
-                     "XML::SAX::Base" : "1.00"
-                  }
-               }
-            },
-            "release_status" : "stable",
-            "version" : "0.40"
-         },
-         "name" : "XML::SAX::Expat",
-         "pathname" : "B/BJ/BJOERN/XML-SAX-Expat-0.40.tar.gz",
-         "provides" : {
-            "XML::SAX::Expat" : {
-               "file" : "XML/SAX/Expat.pm",
-               "version" : "0.40"
-            }
-         },
-         "version" : "0.40"
-      },
       "XML::Simple" : {
          "dist" : "XML-Simple-2.18",
          "module" : "XML::Simple",
@@ -4304,8 +4174,7 @@
                   "requires" : {
                      "Test::Simple" : "0.41",
                      "XML::NamespaceSupport" : "1.04",
-                     "XML::SAX" : 0,
-                     "XML::SAX::Expat" : 0
+                     "XML::SAX" : 0
                   }
                }
             },

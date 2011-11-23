@@ -9,7 +9,6 @@ use AnyEvent;
 use AnyEvent::Twitter::Stream;
 use AnyEvent::HTTP;
 use Coro;
-use Coro::EV;
 use Coro::LWP;
 use Coro::AnyEvent;
 use Log::Minimal;

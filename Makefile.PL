@@ -8,11 +8,11 @@ WriteMakefile(
     VERSION_FROM  => 'lib/Tweet/ToDelicious.pm',    # finds $VERSION
     ABSTRACT_FROM => 'lib/Tweet/ToDelicious.pm',
     PREREQ_PM     => {
+        'Class::Accessor::Lite'     => '0.05',
         'Config::Any'               => '0.23',
         'YAML::XS'                  => '0.37',
         'Net::Delicious'            => '1.14',
         'LWP::Protocol::https'      => '6.02',
-        'EV'                        => '4.03',
         'Coro'                      => '6.06',
         'AnyEvent::Twitter::Stream' => '0.22',
         'Net::OAuth'                => '0.27',

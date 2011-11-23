@@ -14,7 +14,7 @@ use Coro::AnyEvent;
 use Log::Minimal;
 use Tweet::ToDelicious::Entity;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 sub new {
     my $class = shift;

@@ -1,5 +1,8 @@
 Revision history for Perl extension Twitter::ToDelicious.
 
+0.07  Thu Nov 24 01:56:19 JST 2011
+    - fix dependencies.
+
 0.06  Sun Nov 13 01:08 2011
     - add a feature sending your favorite to delicious #2
 

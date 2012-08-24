@@ -19,6 +19,7 @@ WriteMakefile(
         'Net::SSLeay'               => '1.42',
         'List::MoreUtils'           => '0.33',
         'Log::Minimal'              => '0.09',
+        'Sub::Retry'                => '0.04',
     },
     BUILD_REQUIRES => { 'Test::TCP' => '1.13', },
     EXE_FILES      => ['bin/t2delicious.pl'],

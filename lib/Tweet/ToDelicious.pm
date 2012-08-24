@@ -13,8 +13,9 @@ use Coro::LWP;
 use Coro::AnyEvent;
 use Log::Minimal;
 use Tweet::ToDelicious::Entity;
+use Sub::Retry;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 sub new {
     my $class = shift;
@@ -29,13 +30,16 @@ sub run {
     local $|                      = 1;
     local $Log::Minimal::AUTODUMP = 1;
 
-    while (1) {
-        my $myname   = $self->{config}->{t2delicious}->{twitter_screen_name};
-        my $cv       = AE::cv;
-        my $listener = AnyEvent::Twitter::Stream->new(
+    my $myname   = $self->{config}->{t2delicious}->{twitter_screen_name};
+    my $cv       = AE::cv;
+    my ($connector, $connect, $stream, $listener);
+
+    $listener = sub {
+        AnyEvent::Twitter::Stream->new(
             %{ $self->{config}->{twitter} },
             method     => 'userstream',
             on_connect => sub {
+                undef $connector;
                 infof( 'Start watching twitter:@%s, delicious:%s',
                     $myname, $self->{config}->{delicious}->{user} );
             },
@@ -57,13 +61,26 @@ sub run {
                     $self->_posts(@posts);
                 }
             },
+            on_keepalive => sub {
+                debugf("ping received");
+            },
+            on_eof => sub {
+                debugf("eof received");
+                $connect->();
+            },
             on_error => sub {
                 critf(shift);
-                $cv->send;
+                $connect->();
             },
-        );
-        $cv->recv;
-    }
+		);
+    };
+    $connect = sub {
+        $connector = AE::timer 0, 2, sub { $stream = $listener->() };
+    };
+
+    $connect->();
+    $cv->recv;
+
 }
 
 sub delicious {
@@ -96,8 +113,10 @@ sub _posts {
     if ( @posts > 0 ) {
         for my $post (@posts) {
             async {
-                $post->{url} = $self->coro_head( $post->{url} );
-                my $done = $delicious->add_post($post);
+                my $done = retry 3, 1, sub {
+                    $post->{url} = $self->coro_head( $post->{url} );
+                    $delicious->add_post($post);
+                };
                 infof( "Post %s done", $post->{url} )
                     if $done;
             };

@@ -1,5 +1,8 @@
 Revision history for Perl extension Twitter::ToDelicious.
 
+0.08  Fri Aug 24 23:39:04 JST 2012
+    - improved auto-reconnection
+
 0.07  Thu Nov 24 01:56:19 JST 2011
     - fix dependencies.
 

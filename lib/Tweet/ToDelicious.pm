@@ -142,7 +142,7 @@ use L<t2delicious.pl> instead of this module directly.
 
 =head1 DEPENDENCIES
 
-L<Config::Any>, L<YAML::XS>, L<Net::Delicious>, L<LWP::Protocol::https>, L<Coro>, L<AnyEvent::Twitter::Stream>, L<Net::OAuth>, L<Net::SSLeay>, L<List::MoreUtils>, L<Log::Minimal>
+L<Config::Any>, L<YAML::XS>, L<Net::Delicious>, L<LWP::Protocol::https>, L<Coro>, L<AnyEvent::Twitter::Stream>, L<Net::OAuth>, L<Net::SSLeay>, L<List::MoreUtils>, L<Log::Minimal>, L<Sub::Retry>
 
 =head1 SEE ALSO
 
